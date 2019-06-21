@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="基于 NexT.Gemini v7.1.2，因为官方文档有些设置不再适用，另外，网上的很多设置都是要改js代码，我发现最新版本的 NexT ，其实在主题配置文件中就可以轻易实现评论、头像旋转、修改文章底部标签图标、代码复制等更多功能，比网上动辄增删代码的方法简单多了…… 这里记录下博客的每一次配置，做个备忘录o(╥﹏╥)o">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NexT 主题美化">
+<meta property="og:url" content="http://yoursite.com/2019/06/14/NexT 主题美化/index.html">
+<meta property="og:site_name" content="锦衣夜行的小站">
+<meta property="og:description" content="基于 NexT.Gemini v7.1.2，因为官方文档有些设置不再适用，另外，网上的很多设置都是要改js代码，我发现最新版本的 NexT ，其实在主题配置文件中就可以轻易实现评论、头像旋转、修改文章底部标签图标、代码复制等更多功能，比网上动辄增删代码的方法简单多了…… 这里记录下博客的每一次配置，做个备忘录o(╥﹏╥)o">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d0760052784c82502.gif">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d0761a61ea1e80837.png">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d0761a65575794278.png">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d06fabe9e1e545137.png">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d07a780efb5624437.png">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d07abbfe959147246.png">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d07ac9eacfd020855.png">
+<meta property="og:image" content="https://i.loli.net/2019/06/17/5d07b236f2a1b97760.gif">
+<meta property="og:image" content="https://i.loli.net/2019/06/18/5d08b63339c8a59020.gif">
+<meta property="og:updated_time" content="2019-06-18T10:03:27.680Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NexT 主题美化">
+<meta name="twitter:description" content="基于 NexT.Gemini v7.1.2，因为官方文档有些设置不再适用，另外，网上的很多设置都是要改js代码，我发现最新版本的 NexT ，其实在主题配置文件中就可以轻易实现评论、头像旋转、修改文章底部标签图标、代码复制等更多功能，比网上动辄增删代码的方法简单多了…… 这里记录下博客的每一次配置，做个备忘录o(╥﹏╥)o">
+<meta name="twitter:image" content="https://i.loli.net/2019/06/17/5d0760052784c82502.gif">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/06/14/NexT 主题美化/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>NexT 主题美化 | 锦衣夜行的小站</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">锦衣夜行的小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/14/NexT 主题美化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="锦衣夜行">
+      <meta itemprop="description" content="犹少年，才情得尽风流，前程似繁花，但世间，多少英雄终成沙">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="锦衣夜行的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">NexT 主题美化
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-14 22:40:21" itemprop="dateCreated datePublished" datetime="2019-06-14T22:40:21+08:00">2019-06-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-18 18:03:27" itemprop="dateModified" datetime="2019-06-18T18:03:27+08:00">2019-06-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/NexT-主题小站美化/" itemprop="url" rel="index"><span itemprop="name">NexT 主题小站美化</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>基于 <strong><a href="https://theme-next.org/" target="_blank" rel="noopener">NexT.Gemini v7.1.2</a></strong>，因为<a href="https://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">官方文档</a>有些设置不再适用，另外，网上的很多设置都是要改js代码，我发现最新版本的 NexT ，其实在<strong>主题配置文件</strong>中就可以轻易实现评论、头像旋转、修改文章底部标签图标、代码复制等更多功能，比网上动辄增删代码的方法简单多了……</p>
+<p>这里记录下博客的每一次配置，做个备忘录o(╥﹏╥)o</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="主题设定"><a href="#主题设定" class="headerlink" title="主题设定"></a>主题设定</h1><p>编辑 <strong>主题配置文件</strong>，搜索 <strong>scheme</strong> ，有 Muse、Mist、Pisces、Gemini 四种可以选择，例如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h1><p>编辑 <strong>站点配置文件</strong>，将 language 设置成中文：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="设置头像和站点描述"><a href="#设置头像和站点描述" class="headerlink" title="设置头像和站点描述"></a>设置头像和站点描述</h1><h2 id="实现效果图"><a href="#实现效果图" class="headerlink" title="实现效果图"></a>实现效果图</h2><p><img src="https://i.loli.net/2019/06/17/5d0760052784c82502.gif" alt></p>
+<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><p>编辑 <strong>站点配置文件</strong>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment">#站点描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 网站关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="comment"># 作者昵称</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 网站语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
+
+<p>编辑 <strong>主题配置文件</strong>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># In theme directory (source/images): /images/avatar.gif </span></span><br><span class="line">  <span class="comment"># 将头像放置在主题目录下的 source/images/ （若 images 目录不存在，则新建一个） </span></span><br><span class="line">  <span class="comment"># 配置为：avatar: /images/avatar.png</span></span><br><span class="line">  <span class="comment"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="comment"># 将头像放置在站点目录下的 source/uploads/ （若 uploads 目录不存在，则新建一个）</span></span><br><span class="line">  <span class="comment"># 配置为：avatar: /uploads/avatar.png</span></span><br><span class="line">  <span class="comment"># You can also use other linking images.</span></span><br><span class="line">  <span class="comment"># 也可以放一个完整的互联网 url</span></span><br><span class="line"><span class="attr">  url:</span> <span class="string">/images/avatar.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line">  <span class="comment"># 设置头像为椭圆形</span></span><br><span class="line"><span class="attr">  rounded:</span> <span class="literal">true</span>  </span><br><span class="line">  <span class="comment"># The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span></span><br><span class="line">  <span class="comment"># 设置头像透明度，取值在[0, 1]</span></span><br><span class="line"><span class="attr">  opacity:</span> <span class="number">1</span>  </span><br><span class="line">  <span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line">  <span class="comment"># 设置头像是否旋转（这里默认是360°）</span></span><br><span class="line"><span class="attr">  rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="添加标签和分类页面"><a href="#添加标签和分类页面" class="headerlink" title="添加标签和分类页面"></a>添加标签和分类页面</h1><h2 id="实现效果图-1"><a href="#实现效果图-1" class="headerlink" title="实现效果图"></a>实现效果图</h2><p><img src="https://i.loli.net/2019/06/17/5d0761a61ea1e80837.png" alt><br><img src="https://i.loli.net/2019/06/17/5d0761a65575794278.png" alt></p>
+<h2 id="具体实现-1"><a href="#具体实现-1" class="headerlink" title="具体实现"></a>具体实现</h2><p>编辑 <strong>主题配置文件</strong>，添加 tags 和 categories：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line">  <span class="comment">#about: /about/ || user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br></pre></td></tr></table></figure>
+
+<p>在站点目录下，使用 hexo new page tags 新建一个标签页面：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new page tags</span></span><br></pre></td></tr></table></figure>
+
+<p>在站点目录下，使用 hexo new page categories 新建一个分类页面：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new page categories</span></span><br></pre></td></tr></table></figure>
+
+<p>执行成功后,在 source 目录下自动生成了的 tags 和 categories 文件，每个文件都含有一个 index.md<br><img src="https://i.loli.net/2019/06/17/5d06fabe9e1e545137.png" alt></p>
+<p>分别打开这两个 index.md，修改内容并保存：<br><code>source/categories/index.md</code>:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="bullet">-06</span><span class="bullet">-14</span> <span class="number">22</span><span class="string">:40:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"分类"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p><code>source/tags/index.md</code>:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="bullet">-06</span><span class="bullet">-14</span> <span class="number">22</span><span class="string">:40:15</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"标签"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>这里就生成好了标签和分类的导航栏，要运用在文章中，就需就文章的开头添加 tags 和 categories 标签：<br>例如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">小站基础设置</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="bullet">-06</span><span class="bullet">-14</span> <span class="number">22</span><span class="string">:40:21</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line"><span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">NexT</span> <span class="string">主题小站美化</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<div class="note default"><p>
+
+</p><p>tips： 如果觉得每次都需要在文章头部手动添加 tags 和 categories 很麻烦，可以修改 <code>scaffolds/post.md</code>文件，例如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>这样，每次 <code>hexo new &quot;article&quot;</code> 后，生成的 md 文件会自动把 tags 和 categories 加到里面去。</p>
+<p></p></div>
+
+<h1 id="修改文章底部的标签的图标"><a href="#修改文章底部的标签的图标" class="headerlink" title="修改文章底部的标签的图标"></a>修改文章底部的标签的图标</h1><h2 id="实现效果图-2"><a href="#实现效果图-2" class="headerlink" title="实现效果图"></a>实现效果图</h2><p><img src="https://i.loli.net/2019/06/17/5d07a780efb5624437.png" alt></p>
+<h2 id="具体实现-2"><a href="#具体实现-2" class="headerlink" title="具体实现"></a>具体实现</h2><p>编辑 <strong>主题配置文件</strong>，搜索 <strong>tag_icon</strong> 一项，将 false 改为 true，修改内容：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Use icon instead of the symblo # to indicate the tag at the bottom of the post</span></span><br><span class="line"><span class="attr">tag_icon:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="隐藏小站底部的-Powered-by-Hexo-和-Theme-NexT-scheme"><a href="#隐藏小站底部的-Powered-by-Hexo-和-Theme-NexT-scheme" class="headerlink" title="隐藏小站底部的 Powered by Hexo 和 Theme - NexT.scheme"></a>隐藏小站底部的 Powered by Hexo 和 Theme - NexT.scheme</h1><h2 id="原效果"><a href="#原效果" class="headerlink" title="原效果"></a>原效果</h2><p><img src="https://i.loli.net/2019/06/17/5d07abbfe959147246.png" alt></p>
+<h2 id="实现效果图-3"><a href="#实现效果图-3" class="headerlink" title="实现效果图"></a>实现效果图</h2><p><img src="https://i.loli.net/2019/06/17/5d07ac9eacfd020855.png" alt></p>
+<h2 id="具体实现-3"><a href="#具体实现-3" class="headerlink" title="具体实现"></a>具体实现</h2><p>编辑 <strong>主题配置文件</strong>，搜索 powered 和 theme ，将 true 都设为 false：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">powered:</span></span><br><span class="line">  <span class="comment"># Hexo link (Powered by Hexo).</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Version info of Hexo after Hexo link (vX.X.X).</span></span><br><span class="line"><span class="attr">  version:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">theme:</span></span><br><span class="line">  <span class="comment"># Theme &amp; scheme info link (Theme - NexT.scheme).</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Version info of NexT after scheme info (vX.X.X).</span></span><br><span class="line"><span class="attr">  version:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="代码复制"><a href="#代码复制" class="headerlink" title="代码复制"></a>代码复制</h1><h2 id="实现效果图-4"><a href="#实现效果图-4" class="headerlink" title="实现效果图"></a>实现效果图</h2><p><img src="https://i.loli.net/2019/06/17/5d07b236f2a1b97760.gif" alt></p>
+<h2 id="具体实现-4"><a href="#具体实现-4" class="headerlink" title="具体实现"></a>具体实现</h2><p>编辑 <strong>主题配置文件</strong>，搜索 codeblock，将 copy_button 中的 <strong>enable</strong> 和 <strong>show_result</strong> 这两项设为 true：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Manual define the border radius in codeblock, leave it blank for the default value: 1</span></span><br><span class="line"><span class="attr">  border_radius:</span></span><br><span class="line">  <span class="comment"># Add copy button on codeblock</span></span><br><span class="line"><span class="attr">  copy_button:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Show text copy result</span></span><br><span class="line"><span class="attr">    show_result:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Style: only 'flat' is currently available, leave it blank if you prefer default theme</span></span><br><span class="line"><span class="attr">    style:</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="在文章段落中添加-Note-Tag"><a href="#在文章段落中添加-Note-Tag" class="headerlink" title="在文章段落中添加 Note Tag"></a>在文章段落中添加 Note Tag</h1><h2 id="实现效果图-5"><a href="#实现效果图-5" class="headerlink" title="实现效果图"></a>实现效果图</h2><div class="note default"><p> 
+    tips：小技巧
+
+</p><p> 在文章段落中添加 Note Tag</p>
+<p></p></div>
+
+<h2 id="具体实现-5"><a href="#具体实现-5" class="headerlink" title="具体实现"></a>具体实现</h2><p>编辑 <strong>主题配置文件</strong>，搜索 note，可以修改 <code>style</code>、<code>icons</code> 和 <code>border_radius</code>，例如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bs-callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bs-callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line"><span class="attr">  style:</span> <span class="string">simple</span></span><br><span class="line"><span class="attr">  icons:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  border_radius:</span> <span class="number">3</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line"><span class="attr">  light_bg_offset:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>在文章中需要添加的地方加上：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note default"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> 某段话 <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>class</code> 中参数可以有多种选择，最终效果也不一样，例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note default"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> tips：  <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note default"><p> tips：  </p></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note primary"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> primary：  <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note primary"><p> primary：  </p></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note success"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> success：  <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note success"><p> success：  </p></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note info"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> info：  <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note info"><p> info：  </p></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note warning"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> warning：  <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note warning"><p> warning：  </p></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note danger"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> danger：  <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note danger"><p> danger：  </p></div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"note danger no-icon"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span> danger no-icon：  <span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note danger no-icon"><p> danger no-icon：  </p></div>
+
+<h1 id="修改文章中的文本链接样式"><a href="#修改文章中的文本链接样式" class="headerlink" title="修改文章中的文本链接样式"></a>修改文章中的文本链接样式</h1><h2 id="实现效果图-6"><a href="#实现效果图-6" class="headerlink" title="实现效果图"></a>实现效果图</h2><p><img src="https://i.loli.net/2019/06/18/5d08b63339c8a59020.gif" alt></p>
+<h2 id="具体实现-6"><a href="#具体实现-6" class="headerlink" title="具体实现"></a>具体实现</h2><p>编辑文件 <code>themes/next/source/css/_common/components/post/post.styl</code>，添加如下内容：</p>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文章内链接文本样式</span></span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">p</span> a&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0593d3</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#0593d3</span>;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fc6423</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#fc6423</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/14/Hexo-搭建个人小站/" rel="next" title="Hexo 搭建个人小站">
+                <i class="fa fa-chevron-left"></i> Hexo 搭建个人小站
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/17/微信点餐系统1——数据库设计及环境搭建/" rel="prev" title="微信点餐系统1——数据库设计及环境搭建">
+                微信点餐系统1——数据库设计及环境搭建 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="锦衣夜行">
+            
+              <p class="site-author-name" itemprop="name">锦衣夜行</p>
+              <div class="site-description motion-element" itemprop="description">犹少年，才情得尽风流，前程似繁花，但世间，多少英雄终成沙</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主题设定"><span class="nav-number">1.</span> <span class="nav-text">主题设定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置语言"><span class="nav-number">2.</span> <span class="nav-text">设置语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置头像和站点描述"><span class="nav-number">3.</span> <span class="nav-text">设置头像和站点描述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现效果图"><span class="nav-number">3.1.</span> <span class="nav-text">实现效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现"><span class="nav-number">3.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加标签和分类页面"><span class="nav-number">4.</span> <span class="nav-text">添加标签和分类页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现效果图-1"><span class="nav-number">4.1.</span> <span class="nav-text">实现效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现-1"><span class="nav-number">4.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改文章底部的标签的图标"><span class="nav-number">5.</span> <span class="nav-text">修改文章底部的标签的图标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现效果图-2"><span class="nav-number">5.1.</span> <span class="nav-text">实现效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现-2"><span class="nav-number">5.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐藏小站底部的-Powered-by-Hexo-和-Theme-NexT-scheme"><span class="nav-number">6.</span> <span class="nav-text">隐藏小站底部的 Powered by Hexo 和 Theme - NexT.scheme</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原效果"><span class="nav-number">6.1.</span> <span class="nav-text">原效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现效果图-3"><span class="nav-number">6.2.</span> <span class="nav-text">实现效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现-3"><span class="nav-number">6.3.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码复制"><span class="nav-number">7.</span> <span class="nav-text">代码复制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现效果图-4"><span class="nav-number">7.1.</span> <span class="nav-text">实现效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现-4"><span class="nav-number">7.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在文章段落中添加-Note-Tag"><span class="nav-number">8.</span> <span class="nav-text">在文章段落中添加 Note Tag</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现效果图-5"><span class="nav-number">8.1.</span> <span class="nav-text">实现效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现-5"><span class="nav-number">8.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改文章中的文本链接样式"><span class="nav-number">9.</span> <span class="nav-text">修改文章中的文本链接样式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现效果图-6"><span class="nav-number">9.1.</span> <span class="nav-text">实现效果图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现-6"><span class="nav-number">9.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">锦衣夜行</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
