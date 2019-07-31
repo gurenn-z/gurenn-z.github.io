@@ -308,5 +308,86 @@ note:
 }
 ```
 
+# 保存源码到 GitHub
+
+## 效果图
+
+![](https://myblog-hexo-1256211006.cos.ap-chengdu.myqcloud.com/hexo/NexT主题美化/20190731185943.png)
+
+## 具体实现
+
+```bash
+git init
+git remote add origin https://github.com/gurenn-z/gurenn-z.github.io.git
+git add .
+git commit -m "源码备份"
+git push origin master:source-next
+```
+
+
+
+# 字数统计和阅读时长
+
+## 效果图
+
+![](https://myblog-hexo-1256211006.cos.ap-chengdu.myqcloud.com/hexo/NexT主题美化/20190731203220.png)
+
+![](https://myblog-hexo-1256211006.cos.ap-chengdu.myqcloud.com/hexo/NexT主题美化/20190731214438.png)
+
+## 具体实现
+
+安装统计功能插件 ：
+
+```bash
+npm install hexo-symbols-count-time --save
+```
+
+编辑 **站点配置文件** ，添加如下：
+
+```yml
+symbols_count_time:
+  # 文章内是否显示
+  symbols: true # 本文字数
+  time: true # 阅读时长
+  # 网页底部是否显示
+  total_symbols: true # 站点总字数
+  total_time: true # 站点阅读时长
+```
+
+编辑 **主题配置文件** ，找到 `symbols_count_time` 一项，修改如下：
+
+```yml
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: true
+  awl: 4
+  wpm: 275
+```
+
 # 访客人数、访客量、阅读统计 —— 不蒜子
 
+## 效果图
+
+![](https://myblog-hexo-1256211006.cos.ap-chengdu.myqcloud.com/hexo/NexT主题美化/20190731215122.png)
+
+![](https://myblog-hexo-1256211006.cos.ap-chengdu.myqcloud.com/hexo/NexT主题美化/20190731215502.png)
+
+## 具体实现
+
+编辑 **主题配置文件** ，找到 `busuanzi_count` 一项（主题 6 以上已集成了 busuanzi 插件），修改如下：
+
+```yml
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: user
+  total_views: true
+  total_views_icon: eye
+  post_views: true
+  post_views_icon: eye
+```
+
+可以修改 `themes/next/layout_third-party/analytics` 下的 `busuanzi-counter.swig` 文件，添加底部统计说明，例如：
+
+![](https://myblog-hexo-1256211006.cos.ap-chengdu.myqcloud.com/hexo/NexT主题美化/20190731215420.png)

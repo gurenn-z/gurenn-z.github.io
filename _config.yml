@@ -81,3 +81,11 @@ deploy:
   type: git # 一个正确的部署配置中至少要有 type 参数
   repo: https://github.com/gurenn-z/gurenn-z.github.io.git # 远程库（Repository）地址
   branch: master # 分支名称。如果使用的是 GitHub 或 GitCafe 的话，程序会自动检测。
+
+symbols_count_time:
+  # 文章内是否显示
+  symbols: true # 本文字数
+  time: true # 阅读时长
+  # 网页底部是否显示
+  total_symbols: true # 站点总字数
+  total_time: true # 站点阅读时长
